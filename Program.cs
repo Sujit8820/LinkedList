@@ -19,9 +19,8 @@ namespace LinkedList
             operation.AddingFromEnd(nod3);
             operation.Dispiay();
             Console.WriteLine("==============");
-            operation.DeleteLastElement();
-            operation.Dispiay();
-            
+            operation.SearchNode(30);
+            operation.SearchNode(80);
 
 
         }

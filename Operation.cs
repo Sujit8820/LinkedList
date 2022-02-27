@@ -83,11 +83,43 @@ namespace LinkedList
             else
             {
                 Node p = head;
-                while(p.next.next != null)
+                while (p.next.next != null)
                 {
-                    p=p.next;
+                    p = p.next;
                 }
                 p.next = null;
+
+            }
+        }
+        public void SearchNode(int data)
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is empty");
+                return;
+            }
+            else
+            {
+                Node p = head;
+                int count = 1;
+                while (p != null)
+                {
+                    if (p.data == data)
+                    {
+                        break;
+                    }
+
+                    count++;
+                    p = p.next;
+                }
+                if (p == null)
+                {
+                    Console.WriteLine($"{data} is not present in list");
+                }
+                else
+                {
+                    Console.WriteLine($"{data} is present at position {count}");
+                }
 
             }
         }

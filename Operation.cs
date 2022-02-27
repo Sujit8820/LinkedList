@@ -27,7 +27,7 @@ namespace LinkedList
         {
             if (head == null)
             {
-                head =data;
+                head = data;
             }
             else
             {
@@ -40,6 +40,27 @@ namespace LinkedList
                 p.next = temp;
             }
         }
+
+        public void InsertBetween(Node data)
+        {
+            if (head == null)
+            {
+                return;
+            }
+            else
+            {
+                Node p = head;
+                while (p.next.next != null)
+                {
+                    p = p.next;
+                }
+                Node temp = data;
+                temp.next = p.next;
+                p.next = temp;
+
+            }
+        }
+
         public void Dispiay()
         {
             if (head == null)
@@ -47,9 +68,9 @@ namespace LinkedList
                 Console.WriteLine("List is empty");
             }
             else if (head != null)
-            { 
+            {
                 Node p = head;
-                while(p != null)
+                while (p != null)
                 {
                     Console.WriteLine(p.data);
                     p = p.next;

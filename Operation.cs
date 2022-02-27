@@ -23,6 +23,23 @@ namespace LinkedList
                 head = temp;
             }
         }
+        public void AddingFromEnd(Node data)
+        {
+            if (head == null)
+            {
+                head =data;
+            }
+            else
+            {
+                Node p = head;
+                while (p.next != null)
+                {
+                    p = p.next;
+                }
+                Node temp = data;
+                p.next = temp;
+            }
+        }
         public void Dispiay()
         {
             if (head == null)

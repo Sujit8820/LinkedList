@@ -11,12 +11,12 @@ namespace LinkedList
             Console.WriteLine("Wellcome to Linked List");
             Operation operation = new Operation();
 
-            Node nod1 = new Node(70);
+            Node nod1 = new Node(56);
             Node nod2 = new Node(30);
-            Node nod3 = new Node(56);
-            operation.AddingFromFront(nod1);
-            operation.AddingFromFront(nod2);
-            operation.AddingFromFront(nod3);
+            Node nod3 = new Node(70);
+            operation.AddingFromEnd(nod1);
+            operation.AddingFromEnd(nod2);
+            operation.AddingFromEnd(nod3);
             operation.Dispiay();
 
 

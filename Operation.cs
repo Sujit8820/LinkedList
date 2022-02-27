@@ -158,6 +158,40 @@ namespace LinkedList
             }
         }
 
+        public void DeleteElement(int data)
+        {
+
+            if (head == null)
+            {
+                Console.WriteLine("List is empty");
+                return;
+            }
+            else
+            {
+                Node p = head;
+                int count = 1;
+                while (p != null)
+                {
+                    if (p.next.data == data)
+                    {
+                        break;
+                    }
+
+                    count++;
+                    p = p.next;
+                }
+                if (p == null)
+                {
+                    Console.WriteLine($"{data} is not present in list");
+                }
+                else
+                {
+                    p.next = p.next.next;
+
+                }
+            }
+        }
+
         public void Dispiay()
         {
             if (head == null)
@@ -166,12 +200,15 @@ namespace LinkedList
             }
             else if (head != null)
             {
+                int count = 0;
                 Node p = head;
                 while (p != null)
                 {
                     Console.WriteLine(p.data);
+                    count++;
                     p = p.next;
                 }
+                Console.WriteLine($"\nSize of list is {count}");
             }
         }
     }

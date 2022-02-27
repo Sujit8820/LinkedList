@@ -13,14 +13,15 @@ namespace LinkedList
 
             Node node1 = new Node(56);
             Node node2 = new Node(30);
-            Node node3 = new Node(70);
-            Node node4 = new Node(40);
+            Node node3 = new Node(40);
+            Node node4 = new Node(70);
             operation.AddingFromEnd(node1);
             operation.AddingFromEnd(node2);
             operation.AddingFromEnd(node3);
+            operation.AddingFromEnd(node4);
             operation.Dispiay();
             Console.WriteLine("==============");
-            operation.InsertAfter(node4, 35);
+            operation.DeleteElement(40);
             operation.Dispiay();
 
 

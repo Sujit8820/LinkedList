@@ -61,6 +61,19 @@ namespace LinkedList
             }
         }
 
+        public void DeleteFirstElement()
+        {
+            if (head == null)
+            {
+                return;
+            }
+            else
+            {
+                Node p = head;
+                head = p.next;
+            }
+        }
+
         public void Dispiay()
         {
             if (head == null)

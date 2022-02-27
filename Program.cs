@@ -11,16 +11,17 @@ namespace LinkedList
             Console.WriteLine("Wellcome to Linked List");
             Operation operation = new Operation();
 
-            Node nod1 = new Node(56);
-            Node nod2 = new Node(30);
-            Node nod3 = new Node(70);
-            operation.AddingFromEnd(nod1);
-            operation.AddingFromEnd(nod2);
-            operation.AddingFromEnd(nod3);
+            Node node1 = new Node(56);
+            Node node2 = new Node(30);
+            Node node3 = new Node(70);
+            Node node4 = new Node(40);
+            operation.AddingFromEnd(node1);
+            operation.AddingFromEnd(node2);
+            operation.AddingFromEnd(node3);
             operation.Dispiay();
             Console.WriteLine("==============");
-            operation.SearchNode(30);
-            operation.SearchNode(80);
+            operation.InsertAfter(node4, 35);
+            operation.Dispiay();
 
 
         }

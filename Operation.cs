@@ -124,6 +124,40 @@ namespace LinkedList
             }
         }
 
+        public void InsertAfter(Node data, int key)
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is empty");
+                return;
+            }
+            else
+            {
+                Node p = head;
+                int count = 1;
+                while (p != null)
+                {
+                    if (p.data == key)
+                    {
+                        break;
+                    }
+
+                    count++;
+                    p = p.next;
+                }
+                if (p == null)
+                {
+                    Console.WriteLine($"{key} is not present in list\n");
+                }
+                else
+                {
+                    Node temp = data;
+                    temp.next = p.next;
+                    p.next = temp;
+                }
+            }
+        }
+
         public void Dispiay()
         {
             if (head == null)

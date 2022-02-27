@@ -19,7 +19,7 @@ namespace LinkedList
             operation.AddingFromEnd(nod3);
             operation.Dispiay();
             Console.WriteLine("==============");
-            operation.DeleteFirstElement();
+            operation.DeleteLastElement();
             operation.Dispiay();
             
 

@@ -74,6 +74,24 @@ namespace LinkedList
             }
         }
 
+        public void DeleteLastElement()
+        {
+            if (head == null)
+            {
+                return;
+            }
+            else
+            {
+                Node p = head;
+                while(p.next.next != null)
+                {
+                    p=p.next;
+                }
+                p.next = null;
+
+            }
+        }
+
         public void Dispiay()
         {
             if (head == null)

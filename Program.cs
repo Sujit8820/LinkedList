@@ -9,22 +9,17 @@ namespace LinkedList
         public static void Main(string[] args)
         {
             Console.WriteLine("Wellcome to Linked List");
+            Operation operation = new Operation();
 
-            Node start = null;
+            Node nod1 = new Node(70);
+            Node nod2 = new Node(30);
+            Node nod3 = new Node(56);
+            operation.AddingFromFront(nod1);
+            operation.AddingFromFront(nod2);
+            operation.AddingFromFront(nod3);
+            operation.Dispiay();
 
-            Node node1 = new Node(56);
 
-            start = node1;
-
-            Node node2 = new Node(30);
-
-            node2.next = node1;
-            start = node2;
-
-            Node node3 = new Node(70);
-
-            node3.next = node2;
-            start = node3;
 
 
 
